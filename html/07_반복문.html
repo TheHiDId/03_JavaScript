@@ -115,7 +115,139 @@
   </pre>
   <button onclick="check16()">확인</button>
   <p id="result16" style="border: 1px solid black; height: 100px; width: 300;"></p>
-  
+  <hr>
+  <h1>중첩 반복문(2중 for문)</h1>
+  <pre>
+    반복문 내에 반복문이 작성된 형태
+
+    for( ; ; ) {
+
+      for( ; ; ) {
+
+      }
+    }
+  </pre>
+  <hr>
+  <h4>다음 모양 출력하기 1</h4>
+  <pre>
+    1234
+    1234
+    1234
+  </pre>
+  <button onclick="check17()">확인</button>
+  <hr>
+  <h4>다음 모양 출력하기 2</h4>
+  <pre>
+    12345
+    12345
+    12345
+    12345
+  </pre>
+  <button onclick="check18()">확인</button>
+  <hr>
+  <h4>다음 모양 출력하기 3</h4>
+  <pre>
+    654321
+    654321
+    654321
+  </pre>
+  <button onclick="check19()">확인</button>
+  <hr>
+  <h4>다음 모양 출력하기 4</h4>
+  <pre>
+    1
+    12
+    123
+    1234
+    12345
+  </pre>
+  <button onclick="check20()">확인</button>
+  <hr>
+  <h4>다음 모양 출력하기 5</h4>
+  <pre>
+    3
+    34
+    345
+    3456
+    34567
+  </pre>
+  <button onclick="check21()">확인</button>
+  <hr>
+  <h4>다음 모양 출력하기 6</h4>
+  <pre>
+    *
+    **
+    ***
+  </pre>
+  <button onclick="check22()">확인</button>
+  <hr>
+  <h4>입력받은 숫자만큼 * 모양 삼각형 출력하기</h4>
+  <div>
+    입력: <input type="number" id="input23">
+    <button onclick="check23()">확인</button>
+  </div>
+  <hr>
+  <h4>입력받은 숫자만큼 * 모양 삼각형 거꾸로 출력하기</h4>
+  <div>
+    입력: <input type="number" id="input24">
+    <button onclick="check24()">확인</button>
+  </div>
+  <hr>
+  <h1>반복문을 활용할 수 있는 기술</h1>
+  <pre>
+    - 숫자 누적(합계, sum)
+    - 문자열 누적(이어쓰기)
+    - 숫자 세기(count)
+  </pre>
+  <hr>
+  <h4>1부터 30사이의 정수 중 4의 배수는 몇 개?</h4>
+  <button onclick="check25()">확인</button>
+  <hr>
+  <h4>1부터 100사이의 정수 중 입력 받은 값의 배수는 몇 개?</h4>
+  <div>
+    입력: <input type="number" id="input26">
+    <button onclick="check26()">확인</button>
+  </div>
+  <hr>
+  <h4>카운트를 이용해 숫자 부여하기</h4>
+  <pre>
+    1 2 3 4
+    5 6 7 8
+    9 10 11 12
+  </pre>
+  <button onclick="check27()">확인</button>
+  <hr>
+  <h1>while문</h1>
+  <pre>
+    - 끝이 정확히 정해져 있지 않은 경우 사용하는 반복문 -> 몇 번 반복할지 모르는 경우
+
+    - 조건식이 참인 동안 반복하는 반복문
+
+    [작성법]
+    while(조건식) {
+      조건식이 참인 동안 수행할 코드;
+    }
+  </pre>
+  <hr>
+  <h4>prompt를 이용해서 입력받은 숫자 모두 더하기</h4>
+  <pre>
+    단, 취소 입력 시 추가 입력을 받지 않고 누적된 합계를 alert로 출력
+  </pre>
+  <button onclick="check28()">시작</button>
+  <hr>
+  <h3>메뉴 주문하기</h3>
+  <ol>
+    <li>김밥: 4000</li>
+    <li>라면: 4500</li>
+    <li>돈까스: 9000</li>
+  </ol>
+  <strong style="color: red;">취소 클릭 시 주문 완료</strong>
+  <button onclick="check29()">주문하기</button>
+  <h4>주문내역</h4>
+  <ul id="result29" style="height: 200px;">
+    <li>김밥(3개): 12000</li>
+    <li>합계: 12000</li>
+  </ul>
 
   <script src="../js/07_반복문.js"></script>
 </body>
