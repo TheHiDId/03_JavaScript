@@ -177,7 +177,7 @@ function check6() {
   // dArr2의 x행 y열에 저장된 값 얻어오기
   console.log("dArr2[0][2]: ", dArr2[0][2]);
   console.log("dArr2[1][1]: ", dArr2[1][1]);
-  console.log("dArr2[1][1]: ", dArr2[2][0]);
+  console.log("dArr2[2][0]: ", dArr2[2][0]);
 
   // 2차원 배열 인덱스를 이용해서 값 대입
   // 0행 0열, 1행 0열, 2행 0열 값을 * 10 해서 대입
@@ -186,4 +186,60 @@ function check6() {
   dArr2[2][0] *= 10;
 
   console.log(dArr2);
+}
+
+/** 2차원 배열 확인 2 */
+function check7() {
+  // 4행 4열 2차원 배열에 1 ~ 16 난수 배치 (중복 없음)
+  // 1. 배열을 콘솔에 출력
+  // 2. 프롬프트를 이용해서 1 ~ 16 사이 숫자를 입력
+  // 3. 2차원 배열 어디에 위치하는지 검색해서 출력
+
+  // 중복되지 않는 난수 16개를 저장한 1차원 배열 생성
+  const randomArr = [];
+
+  for(let i = 0; i < 16; i++) {
+    const num = Math.floor(Math.random() * 16 + 1); // 1 ~ 16 난수
+
+    // 중복 제거
+    if(randomArr.includes(num)) {
+      i--;
+      continue;
+    }
+
+    randomArr[i] = num;
+  }
+
+  console.log(randomArr);
+  
+  // 2중 for문을 이용해서 2차원 배열 모든 요소 접근
+  let index = 0; // randomArr의 요소에 접근하기 위한 변수 선언
+
+  const arr = [];
+
+  for(let row = 0; row < 4; row++) {
+    arr[row] = []; // 행 생성
+
+    for(let col = 0; col < 4; col++) {
+      // arr[row][col] = `(${row}, ${col})`; // 열 데이터 추가
+      // randomArr 배열의 요소를 하나씩 꺼내서 arr[row][col]에 대입
+      arr[row][col] = randomArr[index];
+      index++; // 변수를 1 증가시켜 randomArr 다음 요소 지정
+    }
+  }
+
+  console.log(arr);
+
+  // 1 ~ 16 숫자 입력 받기
+  const input = Number(prompt("1 ~ 16 숫자 입력"));
+
+  // 2차원 배열 어디에 위치하는지 검사해서 출력
+  for(let row = 0; row < arr.length; row++) {
+    for(let col = 0; col < arr[row].length; col++) {
+      if(arr[row][col] === input) {
+        alert(`${input}은/는 (${row}, ${col})에 있습니다.`);
+        return; // 중복되는 숫자가 없기 때문에 값을 찾으면 함수를 종료
+      }
+    }
+  }
 }
