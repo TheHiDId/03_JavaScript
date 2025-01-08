@@ -145,7 +145,5 @@ function startGame() {
       alert(`Up! (현재 ${count}회)`);
       continue;
     } 
-
-   
   }
 }
