@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12_이벤트</title>
+  <link rel="stylesheet" href="../css/12_이벤트.css">
+</head>
+<body>
+  <h1>Event</h1>
+  <pre>
+    브라우저에서 할 수 있는 동작
+
+    ex) click, keydown, keypress, keyup, mouseover, mouseout, 
+        mouseon, mouseleave, change, submit, focus, blur, drag 등
+
+
+    Event Listener(이벤트 리스너, 감지기)
+
+    - 브라우저에서 발생하는 이벤트를 감지
+
+    - 이벤트가 감지될 때 까지 대기
+
+    - 이벤트가 감지되었을 때 연결된 기능(함수) 수행
+
+    - 이벤트 리스너는 요소 단위로 추가 가능
+
+    - 이벤트 리스너 추가 방법
+
+      1. on이벤트명;: onclick, onkeyup, onchange 등
+
+      2. 요소.addEventListener("이벤트명", 수행할 함수);
+
+
+    Event Handler(이벤트 핸들러, 처리기)
+
+    - 이벤트 리스너에 연결된 기능(함수)
+
+    - 이벤트가 감지되었을 때 수행할 동작을 작성하는 함수
+  </pre>
+  <hr>
+  <h3>인라인 이벤트 모델(Inline)</h3>
+  <pre>
+    HTML 요소에 직접 (이벤트 리스너 = "이벤트 핸들러") 형식으로 작성하는 방법
+
+    최근에는 사용 빈도가 낮아짐(가끔 사용)
+
+    인라인 이벤트 모델 작성 시, 이벤트 핸들러() 안에 this 구문을 작성하면 이벤트 핸들러 함수로 이벤트가 발생된 요소가 전달됨
+  </pre>
+  <div class="my-btn" onclick="check1(this)">
+    인라인 이벤트 모델 확인
+  </div>
+  <hr>
+  <h3>고전 이벤트 모델</h3>
+  <pre>
+    HTML 요소에 이벤트 관련 코드를 직접 작성하지 않고 JS에서 DOM을 이용해 
+    
+    이벤트가 처리되기 원하는 요소가 가지고 있는 고유 이벤트 리스너에 이벤트 핸들러를 대입하는 방법
+
+    위 방법의 단점은 하나의 요소에 동일한 이벤트 리스너와 핸들러를 작성할 수 없다는 점
+
+    마지막으로 작성된 이벤트 핸들러로 덮어씌우게 됨
+  </pre>
+  <button id="testA">고전 이벤트 모델 확인</button>
+  <button id="testB">고전 이벤트 모델 제거</button>
+  <button id="testC">고전 이벤트 모델 단점 확인</button>
+  <hr>
+  <h2>표준 이벤트 모델</h2>
+  <pre>
+    W3C에서 공식적으로 지정한 이벤트 모델
+
+    고전 이벤트 모델의 단점인 이벤트 리스너가 종류별로 하나 뿐이라는 점을 극복
+
+    이벤트 리스너를 원하는 만큼 추가할 수 있음
+
+
+    [작성법]
+
+    요소.addEventListener("이벤트 종류", 이벤트 핸들러);
+  </pre>
+  <hr>
+  <h3>클릭할수록 투명 + 클릭 횟수 증가</h3>
+  <div id="test1">0</div>
+  <hr>
+  <h3>클릭한 버튼에 작성된 색으로 배경색 변경</h3>
+  <div class="test2">
+    <div id="result2"></div>
+    <div class="btn-container">
+      <button>Red</button>
+      <button>Blue</button>
+      <button>Green</button>
+      <button>Orange</button>
+      <button>Pink</button>
+      <button>Violet</button>
+      <button>Gold</button>
+      <button>Silver</button>
+      <button>Gray</button>
+      <button>White</button>
+    </div>
+  </div>
+  <hr>
+  <h3>실습 문제</h3>
+  <div class="practice-container">
+    <div class="box">
+      <div class="display"></div>
+      <input type="text" class="inputColor">
+    </div>
+    <div class="box">
+      <div class="display"></div>
+      <input type="text" class="inputColor">
+    </div>
+    <div class="box">
+      <div class="display"></div>
+      <input type="text" class="inputColor">
+    </div>
+    <div class="box">
+      <div class="display"></div>
+      <input type="text" class="inputColor">
+    </div>
+    <div class="box">
+      <div class="display"></div>
+      <input type="text" class="inputColor">
+    </div>
+  </div>
+  <button id="changeBtn">변경</button>
+
+  <script src="../js/12_이벤트.js"></script>
+</body>
+</html>

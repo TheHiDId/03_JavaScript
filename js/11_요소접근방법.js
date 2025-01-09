@@ -79,3 +79,69 @@ function nameTest() {
 
   div.innerHTML = content;
 }
+
+/** CSS 선택자를 이용한 요소 접근 */
+function cssTest() {
+  // target-div의 속성값이 css-div인 요소 하나 선택
+  const container = document.querySelector("[target-div = css-div]");
+  console.log(container);
+
+  container.style.width = "200px";
+  container.style.height = "200px";
+  container.style.border = "10px solid orange";
+  
+  // document.quertSelector("CSS 선택자");: 여러 요소가 선택된 경우 첫번째 요소만 얻어옴
+
+  const first = document.querySelector("[target-div = css-div]>div");
+  console.log(first); // 선택자는 2개를 선택했지만 첫번째 요소만 선택된 모습
+  first.style.color = "red";
+  first.style.fontSize = "30px";
+
+  // target-div의 속성값이 css-div인 요소 전부 선택해서 유사 배열 형태로 반환
+  const divs = document.querySelectorAll("[target-div = css-div]>div");
+  console.log(divs);
+
+  const colors = ['yellow', 'pink']; // 배열 선언 및 초기화
+
+  for(let i = 0; i < divs.length; i++) {
+    divs[i].style.height = '50%';
+    divs[i].style.display = 'flex';
+    divs[i].style.justifyContent = 'center';
+    divs[i].style.alignItems = 'center';
+    divs[i].style.backgroundColor = colors[i];
+  }
+}
+
+/** 카카오톡 모양의 채팅화면 */
+function readValue() {
+  const chatBg = document.querySelector("#chattingBg")
+  const chatInput = document.querySelector("#userInput")
+
+  // 1. 입력값이 없을 때, 입력값이 공백 밖에 없을 때
+  //    - 문자열.trim(): 문자열 좌우 공백 제거
+  if(chatInput.value.trim().length === 0) {
+    alert("채팅을 입력하세요.");
+    chatInput.value = "";
+    chatInput.focus();
+    return;
+  }
+
+  // 2. 입력값을 읽어와 채팅 화면에 누적
+  chatBg.innerHTML += `<p><span>${chatInput.value}</span></p>`;
+  chatInput.value = "";
+  chatInput.focus();
+
+  // 3. 채팅 화면의 스크롤을 제일 아래로 이동
+  //  - 요소.scrollHeight;: 스크롤 되어 가려진 부분까지 포함한 요소 전체 높이 반환
+  //  - 요소.scrollTop;: 스크롤 제일 위에서부터 현재 위치 반환
+  //  - 요소.scrollTop = "값";: 스크롤을 지정한 값만큼 위에서부터 떨어진 위치로 이동시킴
+  chatBg.scrollTop = chatBg.scrollHeight;
+}
+
+// #userInput인 요소에 엔터 키 입력 기능 추가
+document.querySelector("#userInput").addEventListener("keydown", function(e){
+  // console.log(e.key);
+  if(e.key === "Enter") {
+    readValue();
+  }
+});
