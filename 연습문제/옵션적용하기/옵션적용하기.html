@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>옵션 적용하기</title>
+  <link rel="stylesheet" href="./옵션적용하기.css">
+</head>
+<body>
+  <div class="container">
+    <div class="innerContainer">
+      <div class="title">너비: </div>
+      <input type="number" class="widthInput"> px
+    </div>
+    <div class="innerContainer">
+      <div class="title">높이: </div>
+      <input type="number" class="heightInput"> px
+    </div>
+    <div class="innerContainer">
+      <div class="title">글자크기: </div>
+      <input type="number" class="textSizeInput"> px
+    </div>
+    <div class="innerContainer">
+      <div class="title">굵기: </div>
+      보통 <input type="radio" name="textWeight" value="normal" checked> 
+      굵게 <input type="radio" name="textWeight" value="bold">
+    </div>
+    <div class="innerContainer">
+      <div class="title">글자색: </div>
+      <input type="text" class="textColorInput">
+    </div>
+    <div class="innerContainer">
+      <div class="title">배경색: </div>
+      <input type="text" class="backgroundColorInput">
+    </div>
+    <div class="innerContainer">
+      <div class="title">가로정렬: </div>
+      왼쪽 <input type="radio" value="alignLeft" name="rowAlign" checked> 
+      가운데 <input type="radio" value="alignCenter" name="rowAlign">
+      오른쪽 <input type="radio" value="alignRight" name="rowAlign">
+    </div>
+    <div class="innerContainer">
+      <div class="title">세로정렬: </div>
+      위 <input type="radio" value="alignTop" name="colAlign" checked> 
+      가운데 <input type="radio" value="alignCenter" name="colAlign">
+      아래 <input type="radio" value="alignBottom" name="colAlign">
+    </div>
+    <div class="innerContainer">
+      <div class="title">출력 문자열: </div>
+      <input type="text" class="printText">
+    </div>
+    <button id="btn">적용</button>
+    <div class="printArea"></div>
+  </div>
+  <script src="./옵션적용하기.js"></script>
+</body>
+</html>
