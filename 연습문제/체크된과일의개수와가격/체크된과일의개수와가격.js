@@ -1,14 +1,14 @@
 const count = document.querySelector(".count");
 const result = document.querySelector(".result");
 
+const inputAppleNum = document.querySelector(".inputAppleNum");
+const inputBananaNum = document.querySelector(".inputBananaNum");
+const inputMelonNum = document.querySelector(".inputMelonNum");
+
 count.addEventListener("click", () => {
   const appleChecked = document.querySelector("#appleChecked").checked;
   const bananaChecked = document.querySelector("#bananaChecked").checked;
   const MelonChecked = document.querySelector("#melonChecked").checked;
-
-  const inputAppleNum = document.querySelector(".inputAppleNum");
-  const inputBananaNum = document.querySelector(".inputBananaNum");
-  const inputMelonNum = document.querySelector(".inputMelonNum");
   
   let inputAppleNumVal = Number(inputAppleNum.value);
   let inputBananaNumVal = Number(inputBananaNum.value);

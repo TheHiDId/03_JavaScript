@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위, 바위, 보</title>
+  <link rel="stylesheet" href="./가위바위보.css">
+</head>
+<body>
+  <div id="mainBox">
+    <div id="userBox">
+      <div class="title">USER</div>
+      <div class="box"></div>
+      <div class="btn-box">
+        <button id="scissors">가위</button><button id="rock">바위</button><button id="paper">보</button>
+      </div>
+    </div>
+    <div class="vs">VS</div>
+    <div id="comBox">
+      <div class="title">COM</div>
+      <div class="box"></div>
+      <div class="btn-box">
+        <button id="gameStart">GAME START</button>
+      </div>
+    </div>
+    <div id="resultBox">
+      <div id="ucBox">USER VS COM</div>
+      <table>
+        <tr>
+          <td>승</td>
+          <td>무</td>
+          <td>패</td>
+        </tr>
+        <tr>
+          <td class="win">0</td>
+          <td class="draw">0</td>
+          <td class="lose">0</td>
+        </tr>
+      </table>
+      <div class="record-box">
+        <span>WIN</span><span>가위</span><span>VS</span><span>보</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./가위바위보.js"></script>
+</body>
+</html>
