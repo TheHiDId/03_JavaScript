@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #mainBox{
   width: 100%;
   height: 800px;
@@ -69,7 +75,6 @@
 }
 
 #resultBox>div{
-  box-sizing: border-box;
   width: 100%;
   margin: 5px 0;
   text-align: center;
