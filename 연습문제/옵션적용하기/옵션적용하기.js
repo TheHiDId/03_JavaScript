@@ -7,10 +7,10 @@ const backgroundColorInput = document.querySelector(".backgroundColorInput");
 const rowAlign = document.querySelectorAll("[name = rowAlign]");
 const colAlign = document.querySelectorAll("[name = colAlign]");
 const printText = document.querySelector(".printText");
-const button = document.querySelector("#btn");
+const applyButton = document.querySelector("#applyButton");
 const printArea = document.querySelector(".printArea");
 
-button.addEventListener("click", function() {
+applyButton.addEventListener("click", function() {
   // 너비
   printArea.style.width = widthInput.value + "px";
 
