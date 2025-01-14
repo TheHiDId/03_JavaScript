@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .title{
   font-size: 40px;
   font-weight: bold;
@@ -5,9 +9,10 @@
 
 .container{
   width: 150px;
-  height: 250px;
+  height: 200px;
   margin: 25px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -19,11 +24,11 @@
 }
 
 .box:hover{
-  background-color: aquamarine;
+  background-color: skyblue;
 }
 
 .box:active{
-  background-color: brown;
+  background-color: orangered;
 }
 
 .reset{

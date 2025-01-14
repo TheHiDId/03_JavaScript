@@ -1,0 +1,156 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+}
+
+/* 왼쪽 컨테이너 요소 디자인 */
+#inputNumContainer{
+  width: 300px;
+  height: 580px;
+  margin: 20px;
+}
+
+#valuePhoneNum{
+  width: 300px;
+  height: 80px;
+  margin: 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 2px solid lightgray;
+}
+
+#phoneNumBtnContainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400px;
+}
+
+.phoneNumBtn{
+  width: 90px;
+  height: 90px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.phoneNumBtn:hover{
+  background-color: skyblue;
+}
+
+.phoneNumBtn:active{
+  scale: 98%
+}
+
+#functionBtnContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#functionBtnContainer>button{
+  width: 300px;
+  height: 35px;
+  margin: 5px 0;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#addBtn{
+  border-color: green;
+  color: green;
+}
+
+#resetBtn{
+  border-color: gray;
+  color: gray;
+}
+
+#addBtn:hover{
+  color: white;
+  background-color: green;
+}
+
+#addBtn:active{
+  scale: 98%;
+}
+
+#resetBtn:hover{
+  color: white;
+  background-color: gray;
+}
+
+#resetBtn:active{
+  scale: 98%;
+}
+
+/* 오른쪽 컨테이너 요소 디자인 */
+#listContainer{
+  width: 240px;
+  height: 580px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-left: 2px solid lightgray;
+}
+
+#listTitle{
+  width: 100%;
+  height: 50px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+li{
+  margin: 5px 20px;
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+}
+
+li>span:hover{
+  scale: 105%;
+}
+
+li>span:active{
+  scale: 98%;
+}
+
+.savedPhoneNum{
+  width: 80%;
+  font-weight: bold;
+}
+
+.favoriteNum{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.deleteNum{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
