@@ -1,0 +1,4 @@
+function resetNumber(){const circleItems=document.querySelectorAll(".circle");for(let circle of circleItems){circle.classList.remove("selected");}}
+function createRandomNumber(){const ranNumInterval=setInterval(()=>{resetNumber();const circleItems=document.querySelectorAll(".circle");const selectedNumbers=new Set();while(selectedNumbers.size<6){const randomNum=Math.floor(Math.random()*45)+1;selectedNumbers.add(randomNum);}for(let number of selectedNumbers){circleItems[number-1].classList.add("selected");}},100);return ranNumInterval;}
+const createNumBtn=document.querySelector("#createNumBtn");let isGenerating=false;createNumBtn.addEventListener("click",()=>{if(isGenerating)return;isGenerating=true;const ranNumInterval=createRandomNumber();setTimeout(()=>{clearInterval(ranNumInterval);isGenerating=false;},2000);});
+const resetBtn=document.querySelector("#resetBtn");resetBtn.addEventListener("click",()=>{resetNumber();});

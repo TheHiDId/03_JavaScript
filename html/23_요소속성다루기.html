@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>23_요소 속성 다루기</title>
+  <link rel="stylesheet" href="../css/23_요소속성다루기.css">
+</head>
+<body>
+  <h1>요소 속성 관련 메서드</h1>
+  <pre>
+    1. 요소.getAttribute("속성명"): 속성값 얻어오기
+
+    2. 요소.setAttribute("속성명", "속성값"): 요소에 새로운 속성 추가하기 -> 이미 같은 속성이 존재하면 덮어씌움
+
+    3. 요소.removeAttribute("속성명"): 속성 제거하기
+
+    4. 요소.hasAttribute("속성명"): 속성 존재여부 확인
+  </pre>
+  <input id="input1" name="nameTest">
+  <button id="btn1">속성 관련 메서드 확인</button>
+  <hr>
+  <h1>요소 속성에 직접 접근</h1>
+  <pre>
+    DOM 요소에 노출되어있는 속성은 요소.속성명 으로 얻어오기/설정하기가 가능
+
+    직접 접근 방법 장점: 짧고 간결함, Attribute 관련 메서드보다 속도가 빠름, 표준 HTML에 대해 직접 접근 가능
+
+    직접 접근 방법 단점: DOM 요소별 속성 파악이 필요함, 속성 보유여부에 대한 일관성이 부족함
+
+    Attribute() 관련 메서드 장점: 속성 파악 불필요(있으면 설정, 없으면 만들어서 설정), 일관성
+
+    Attribute() 관련 메서드 단점: 길고 느림
+  </pre>
+  <input type="text" id="input2" name="nameTwo" value="input2입니다.">
+  <div id="div2">div2입니다.</div>
+  <button id="btn2">요소 직접 접근 확인</button>
+  <hr>
+  <h1>class 관련 속성(classList)</h1>
+  <pre>
+    클래스 속성의 특징 : 모든 HTML 요소가 가질 수 있음, 중복 가능, 한 요소가 여러 클래스를 가질 수 있음
+
+    요소.classList: 요소의 클래스를 조작하기 위한 속성(property) // Attribute: HTML 요소 속성, Property: JS 객체 속성
+
+    1. 요소.classList.add("클래스1"[, ...]): 요소에 클래스를 추가, 복수의 클래스 추가 가능
+
+      - 요소의 클래스가 존재하고 있으면 이어서 추가 (덮어씌우지 않음)
+
+    2. 요소.classList.remove("클래스1"[, ...]): 요소의 클래스를 제거, 복수의 클래스 제거 가능
+
+    3. 요소.classList.toggle("클래스명"): 요소에 클래스가 있으면 제거, 없으면 추가
+
+    4. 요소.classList.contains("클래스명"): 요소에 클래스가 포함되어 있으면 true, 없으면 false
+
+    5. 요소.classList.replace("기존 클래스명", "새 클래스명"): 요소가 가지고 있는 기존 클래스명을 새 클래스명으로 변경
+  </pre>
+  <div>
+    <button class="btn">red</button>
+    <button class="btn">yellow</button>
+    <button class="btn">green</button>
+  </div>
+  <div class="container-3">
+    <button id="addBtn">추가</button>
+    <div class="btn-container hidden">
+      <button id="modifyBtn" class="bg-green">수정</button>
+      <button>삭제</button>
+      <button id="closeBtn">종료</button>
+    </div>
+  </div>
+
+  <script src="../js/23_요소속성다루기.js"></script>
+</body>
+</html>

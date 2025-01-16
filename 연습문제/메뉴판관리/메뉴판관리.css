@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#mainContainer{
+  width: 900px;
+  margin: 50px 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+/* 제목 컨테이너 */
+#titleContainer{
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.res-name{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#resName{
+  margin: 0 0 0 5px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+#inputResName{
+  width: 93%;
+  height: 40px;
+  margin: 0 0 0 5px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#resN{
+  margin: 15px 0;
+}
+
+
+/* 메뉴 컨테이너 */
+#menuContainer{
+  width: 100%;
+  height: 300px;
+  margin: 5px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: hidden;
+}
+
+#menuList{
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.menu{
+  width: 275px;
+  height: 34px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.menu>span{
+  font-size: 20px;
+}
+
+.menu>.price{
+  display: flex;
+}
+
+.input-menu-name{
+  width: 120px;
+  font-size: 20px;
+}
+
+.input-price{
+  width: 80px;
+  font-size: 20px;
+}
+
+
+/* 수정 컨테이너 */
+#editContainer{
+  display: flex;
+  justify-content: end;
+}
+
+#editContainer>button{
+  width: 100px;
+  height: 30px;
+  margin: 0 0 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  cursor: pointer;
+}

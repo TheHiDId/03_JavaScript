@@ -7,6 +7,10 @@ const listContainer = document.querySelector("#listContainer");
 // 번호를 눌렀을 때 입력
 for(let phoneNumBtn of phoneNumBtns) {
   phoneNumBtn.addEventListener("click", () => {
+    if(valuePhoneNum.innerHTML.length >= 11) {
+      return;
+    }
+
     valuePhoneNum.innerHTML += phoneNumBtn.innerHTML;
   });
 }
@@ -33,13 +37,21 @@ addBtn.addEventListener("click", () => {
   spanDeleteNum.className = "deleteNum";
   spanDeleteNum.innerHTML = "&times;";
 
+  // 저장된 번호 클릭 시 자동으로 그 번호가 입력
+  spanSavedPhoneNum.addEventListener("click", () => {
+    valuePhoneNum.innerHTML = spanSavedPhoneNum.innerHTML;
+  });
+
   // 즐겨찾기
   spanFavoriteNum.addEventListener("click", (e) => {
-    if(e.target.style.color = "orange") {
+    if(e.target.style.color === "orange") {
       e.target.style.color = "black";
+      spanSavedPhoneNum.style.color = "black";
+      return;
     }
     
     e.target.style.color = "orange";
+    spanSavedPhoneNum.style.color = "red";
   });
 
   // 삭제

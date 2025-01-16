@@ -5,9 +5,19 @@
   user-select: none;
 }
 
-#container{
+body{
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+}
+
+#container{
+  width: 620px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 왼쪽 컨테이너 요소 디자인 */
@@ -42,6 +52,7 @@
   height: 90px;
   font-size: 24px;
   font-weight: bold;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +64,7 @@
 }
 
 .phoneNumBtn:active{
+  background-color: lightblue;
   scale: 98%
 }
 

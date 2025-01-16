@@ -7,7 +7,27 @@
   <link rel="stylesheet" href="./메뉴판관리.css">
 </head>
 <body>
-  
+  <main id="mainContainer">
+    <div id="titleContainer">
+      <span id="resN" class="res-name">식당명 : </span><span id="resName" class="res-name">식당명을 입력하세요</span>
+    </div>
+    <div id="menuContainer">
+      <ul id="menuList">
+        <li class="menu">
+          <span class="menu-name">카레 돈까스</span><span class="price">10000원</span>
+        </li>
+        <li class="menu">
+          <span class="menu-name">카레 돈까스</span><span class="price">10000원</span>
+        </li>
+        <li class="menu">
+          <input type="checkbox" class="menu-check"><input type="text" class="input-menu-name"><input type="number" class="input-price">
+        </li>
+      </ul>
+    </div>
+    <div id="editContainer">
+      <button id="editBtn">수 정</button>
+    </div>
+  </main>
   <script src="./메뉴판관리.js"></script>
 </body>
 </html>
