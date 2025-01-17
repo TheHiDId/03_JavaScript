@@ -1,0 +1,94 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#mainContainer{
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#titleContainer{
+  width: 100%;
+  margin: 50px;
+}
+
+#mainTitle{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#memberSystemContainer{
+  width: 100%;
+  display: flex;
+}
+
+#registerContainer{
+  width: 50%;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#registerTitle{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.registerItem{
+  margin: 20px 0 0 0;
+}
+
+#registerContainer>input{
+  height: 30px;
+  margin: 5px 0 0 0;
+}
+
+#registerBtn{
+  width: 70px;
+  height: 40px;
+  margin: 20px 0 0 0;
+  border: none;
+  color: white;
+  background-color: darkgreen;
+  cursor: pointer;
+}
+
+#listContainer{
+  width: 50%;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#listTitle{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#listTable{
+  margin: 20px 0 0 0;
+}
+
+#listTable, .listTableRow>td{
+  padding: 10px 15px;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.listTableRow:first-child{
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+#deleteBtn{
+  width: 70px;
+  height: 40px;
+  margin: 20px 0 0 0;
+  border: none;
+  color: white;
+  background-color: darkgreen;
+  cursor: pointer;
+}

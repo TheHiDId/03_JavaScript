@@ -8,6 +8,7 @@ function resetNumber() {
   selectedNumbers.clear();
 }
 
+
 function createRandomNumber() {
   const ranNumInterval = setInterval(() => {
     resetNumber();
@@ -28,8 +29,10 @@ function createRandomNumber() {
   return ranNumInterval;
 }
 
+
 const createNumBtn = document.querySelector("#createNumBtn");
 let isGenerating = false;
+
 const selectedNumbers = new Set();
 
 createNumBtn.addEventListener("click", () => {
@@ -52,13 +55,14 @@ createNumBtn.addEventListener("click", () => {
   }, 2000);
 });
 
+
 const resetBtn = document.querySelector("#resetBtn");
 
 resetBtn.addEventListener("click", () => {
   resetNumber();
 });
 
-// 클릭 이벤트 수정
+
 const circleBtn = document.querySelectorAll(".circle");
 
 for (let circle of circleBtn) {

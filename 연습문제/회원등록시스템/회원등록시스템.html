@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 등록 시스템</title>
+  <link rel="stylesheet" href="./회원등록시스템.css">
+</head>
+<body>
+  <main id="mainContainer">
+    <div id="titleContainer">
+      <div id="mainTitle">회원 등록 시스템</div>
+    </div>
+    <div id="memberSystemContainer">
+      <div id="registerContainer">
+        <div id="registerTitle">회원 등록</div>
+        <div class="registerItem">아이디:</div><input type="text" id="inputId">
+        <div class="registerItem">이름:</div><input type="text" id="inputName">
+        <div class="registerItem">전화번호:</div><input type="number" id="inputPhoneNum">
+        <button id="registerBtn">등 록</button>
+      </div>
+      <div id="listContainer">
+        <div id="listTitle">등록된 회원 목록</div>
+        <table id="listTable">
+          <tr class="listTableRow">
+            <td class="listCheckbox"><input type="checkbox" class="listCheckbox tableHeader"></td>
+            <td class="listId">아이디</td>
+            <td class="listName">이름</td>
+            <td class="listPhoneNum">전화번호</td>
+          </tr>
+          <tr class="listTableRow created">
+            <td class="listCheckbox"><input type="checkbox" class="listCheckbox"></td>
+            <td class="listId">Aaaa0000</td>
+            <td class="listName">백종엽</td>
+            <td class="listPhoneNum">01012341234</td>
+          </tr>
+        </table>
+        <button id="deleteBtn">선택 삭제</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="./회원등록시스템.js"></script>
+</body>
+</html>
