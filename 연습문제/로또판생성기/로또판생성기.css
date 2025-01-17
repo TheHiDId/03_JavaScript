@@ -60,10 +60,11 @@ body{
   align-items: center;
   border: 2px solid purple;
   border-radius: 50%;
-  color: white;
+  color: gray;
   font-size: 20px;
   font-weight: bold;
   font-family: "돋움체";
+  cursor: pointer;
 }
 
 #buttonContainer{
@@ -95,15 +96,20 @@ body{
 }
 
 #resetBtn{
-  color: slategrey;
-  border-color: slategrey;
+  color: gray;
+  border-color: gray;
 }
 
 #resetBtn:active{
   color: white;
-  background-color: slategrey;
+  background-color: gray;
 }
 
 .selected{
+  color: white;
   background-color: purple;
+}
+
+.is-generating{
+  transition: all 2s ease;
 }
